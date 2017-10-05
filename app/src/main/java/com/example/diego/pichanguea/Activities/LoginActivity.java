@@ -1,4 +1,4 @@
-package com.example.diego.pichanguea;
+package com.example.diego.pichanguea.Activities;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -29,6 +29,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.diego.pichanguea.Controllers.Get.jugadoresGet;
+import com.example.diego.pichanguea.Controllers.Get.sesionGet;
+import com.example.diego.pichanguea.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -144,9 +148,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      * If there are form errors (invalid email, missing fields, etc.), the
      * errors are presented and no actual login attempt is made.
      */
-    private void attemptLogin() {
+    public void logear(String result){
         Intent act=new Intent(this,MenuActivity.class);
+        act.putExtra("parametro", result);
         startActivity(act);
+
+    }
+    private void attemptLogin() {
+        new sesionGet(this).execute(getResources().getString(R.string.servidor)+"sesion?usuario=user&pass=pw");
+
         if (mAuthTask != null) {
             return;
         }

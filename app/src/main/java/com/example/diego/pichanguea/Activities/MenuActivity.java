@@ -1,4 +1,4 @@
-package com.example.diego.pichanguea;
+package com.example.diego.pichanguea.Activities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -12,6 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.diego.pichanguea.Controllers.Get.jugadoresGet;
+import com.example.diego.pichanguea.Models.Usuario;
+import com.example.diego.pichanguea.R;
+import com.example.diego.pichanguea.Utilities.JsonHandler;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -41,6 +46,12 @@ public class MenuActivity extends AppCompatActivity
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        String resultado=getIntent().getExtras().getString("parametro");
+        System.out.println(resultado);
+        JsonHandler jh= new JsonHandler();
+        Usuario usuario = null;
+        //usuario=jh.getInformacion(resultado,usuario);
+
     }
 
     @Override
