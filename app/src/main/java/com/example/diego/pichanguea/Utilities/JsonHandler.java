@@ -10,6 +10,7 @@ import org.json.JSONObject;
 
 
 public class JsonHandler {
+<<<<<<< HEAD
 
     public void getInformacion(String datos, Usuario usuario){
         try{
@@ -28,10 +29,19 @@ public class JsonHandler {
             usuario.setId(jo.getJSONObject("usuario").getString("id"));
 
             //return usuario;
+=======
+    /*
+    public Usuario getInformacion(String datos, Usuario usuario){
+        try{
+            JSONObject ja = new JSONObject();
+            System.out.println("lenghth"+ja.length());
+            return usuario;
+>>>>>>> a75492894cc37063a274fa55bc57dc6c5cdf9df0
         }
         catch (JSONException e) {
             Log.e("ERROR", this.getClass().toString() + " " + e.toString());
         }
+<<<<<<< HEAD
         //return null;
     }
     public JSONObject setRegister(Usuario usuario) {
@@ -55,6 +65,11 @@ public class JsonHandler {
         }
         return null;
     }
+=======
+        return null;
+    } no pescar aun!!!
+    */
+>>>>>>> a75492894cc37063a274fa55bc57dc6c5cdf9df0
 
 
     /**

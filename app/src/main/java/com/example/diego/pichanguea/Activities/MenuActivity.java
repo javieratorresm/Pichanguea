@@ -19,6 +19,11 @@ import com.example.diego.pichanguea.Models.Usuario;
 import com.example.diego.pichanguea.R;
 import com.example.diego.pichanguea.Utilities.JsonHandler;
 
+import com.example.diego.pichanguea.Controllers.Get.jugadoresGet;
+import com.example.diego.pichanguea.Models.Usuario;
+import com.example.diego.pichanguea.R;
+import com.example.diego.pichanguea.Utilities.JsonHandler;
+
 public class MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private String[] mPlanetTitles;
@@ -50,6 +55,7 @@ public class MenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+<<<<<<< HEAD:app/src/main/java/com/example/diego/pichanguea/Activities/MenuActivity.java
         View header=navigationView.getHeaderView(0);
         String resultado=getIntent().getExtras().getString("parametro");
         JsonHandler jh= new JsonHandler();
@@ -59,6 +65,14 @@ public class MenuActivity extends AppCompatActivity
         //ystem.out.println("nombre de usuario: "+usuario.getNombreUsuario());
         //TextView dispNombre =(TextView)header.findViewById(R.id.dispNombre);
         //dispNombre.setText(usuario.getNombre());
+=======
+        String resultado=getIntent().getExtras().getString("parametro");
+        System.out.println(resultado);
+        JsonHandler jh= new JsonHandler();
+        Usuario usuario = null;
+        //usuario=jh.getInformacion(resultado,usuario);
+
+>>>>>>> a75492894cc37063a274fa55bc57dc6c5cdf9df0:app/src/main/java/com/example/diego/pichanguea/Activities/MenuActivity.java
     }
 
     @Override

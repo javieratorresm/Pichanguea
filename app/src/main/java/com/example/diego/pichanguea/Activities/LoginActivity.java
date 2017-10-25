@@ -155,7 +155,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     }
     private void attemptLogin() {
+<<<<<<< HEAD:app/src/main/java/com/example/diego/pichanguea/Activities/LoginActivity.java
         new sesionGet(this).execute(getResources().getString(R.string.servidor)+"api/Sesion?usuario=Fco&pass=clave");
+=======
+        new sesionGet(this).execute(getResources().getString(R.string.servidor)+"sesion?usuario=user&pass=pw");
+>>>>>>> a75492894cc37063a274fa55bc57dc6c5cdf9df0:app/src/main/java/com/example/diego/pichanguea/Activities/LoginActivity.java
 
         if (mAuthTask != null) {
             return;
